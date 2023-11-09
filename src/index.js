@@ -34,7 +34,7 @@ async function handleRequest(event) {
     // Connect to the KV store
     const files = new KVStore('testing');
     
-
+    // Get item from KV-store
     const entry = await files.get('magenta');
     let tmpValue = await entry.text();
 
