@@ -31,7 +31,9 @@ async function handleRequest(event) {
   // If request is to the `/` path...
   if (url.pathname == "/") {
 
+    // Connect to the KV store
     const files = new KVStore('testing');
+    
 
     const entry = await files.get('magenta');
     let tmpValue = await entry.text();
